@@ -1,0 +1,17 @@
+{
+	"name": "bookmarker",
+	"version": "1.0.0",
+	"description": "An bookmarker Electron application",
+	"main": "app/main.js",
+	"scripts": {
+		"start": "electron ."
+	},
+	"license": "MIT",
+	"private": true,
+	"dependencies": {
+		"electron": "^5.0.2"
+	},
+	"devDependencies": {},
+	"keywords": [],
+	"author": "Darko Tasevski <darktasevski@gmail.com>"
+}

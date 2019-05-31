@@ -1,0 +1,15 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body,
+input {
+	/* allows us to use the system font in CSS.  */
+	font: menu;
+}
