@@ -1,0 +1,31 @@
+{
+	"name": "markdown-notes",
+	"productName": "MArkdown Notes",
+	"version": "1.0.0",
+	"description": "Markdown note taking app",
+	"main": "app/main.js",
+	"dependencies": {
+		"electron": "^5.0.2",
+		"marked": "^0.6.2"
+	},
+	"devDependencies": {
+		"babel-eslint": "^7.2.3",
+		"devtron": "^1.4.0",
+		"electron-packager": "^8.7.1",
+		"eslint": "^3.19.0",
+		"eslint-plugin-import": "^2.3.0"
+	},
+	"scripts": {
+		"start": "electron .",
+		"build": "npm run build-mac && npm run build-win && npm run build-linux",
+		"build-mac": "electron-packager . --platform=darwin --out=build --icon=./icons/Icon.icns --asar --overwrite",
+		"build-win": "electron-packager . --platform=win32 --out=build --icon=./icons/Icons.ico --asar --overwrite",
+		"build-linux": "electron-packager . --platform=linux --out=build --icon=./icons/Icons.png --asar --overwrite",
+		"build-mas": "./scripts/mas/build.sh"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Puritanic/Electron.git"
+	},
+	"homepage": "https://github.com/Puritanic/Electron"
+}
