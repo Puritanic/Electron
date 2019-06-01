@@ -1,0 +1,21 @@
+{
+	"name": "clippy",
+	"version": "1.0.0",
+	"description": "A tray only clipboard manager built in Electron.",
+	"main": "app/main.js",
+	"scripts": {
+		"start": "electron ."
+	},
+	"dependencies": {
+		"electron": "5.0.2"
+	},
+	"devDependencies": {
+		"eslint": "4.17.0"
+	},
+	"directories": {
+		"doc": "docs"
+	},
+	"keywords": [],
+	"author": "Darko Tasevski <darktasevski@gmail.com>",
+	"license": "MIT"
+}

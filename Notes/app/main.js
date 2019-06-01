@@ -16,7 +16,9 @@ app.on('window-all-closed', () => {
 	}
 });
 
+// Electron provides the hasVisibleWindows argument, which will be a Boolean.
 app.on('activate', (event, hasVisibleWindows) => {
+	// If there are no visible windows when the user activates the application, creates one.
 	if (!hasVisibleWindows) {
 		createWindow();
 	}
@@ -25,10 +27,14 @@ app.on('activate', (event, hasVisibleWindows) => {
 const createWindow = (exports.createWindow = () => {
 	let x, y;
 
+	// Gets the browser window that is currently active.
 	const currentWindow = BrowserWindow.getFocusedWindow();
 
 	if (currentWindow) {
 		const [currentWindowX, currentWindowY] = currentWindow.getPosition();
+		// The minor problem that we have right now is that each new window appears in the same default position as the first window and completely eclipses it.
+		// It might be more obvious that the new window is created if it is slightly offset from the previous window
+		// If there is a currently active window from the previous step, sets the coordinates of the next window down and to the right of the currently active window.
 		x = currentWindowX + 10;
 		y = currentWindowY + 10;
 	}
